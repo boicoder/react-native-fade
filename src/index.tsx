@@ -12,10 +12,13 @@ type FadeProps = {
   duration?: number;
 };
 
-const opacityValue = new Value(0);
-const translationValue = new Value(0);
+//const opacityValue = new Value(0);
+//const translationValue = new Value(0);
 
 function Fade(props: FadeProps) {
+  const opacityValue = new Value(0);//moved here
+  const translationValue = new Value(0);//moved here
+  
   const { style, children, direction, visible, duration = 200 } = props;
   const [isReady, setIsReady] = useState(false);
 
